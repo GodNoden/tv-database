@@ -17,10 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/series', [SeriesController::class,'index']);
-Route::get('/casts', [CastController::class,'index']);
+Route::get('/series', [SeriesController::class, 'index']);
+
+Route::get('/casts', [CastController::class, 'index']);
 Route::get('/series/cast', [SeriesCastController::class, 'index']);
 Route::get('/series/{$id}', [SeriesController::class, 'show']);

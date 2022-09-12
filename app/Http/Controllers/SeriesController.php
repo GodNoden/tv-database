@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Serie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 
 class SeriesController extends Controller
 {
@@ -16,7 +17,10 @@ class SeriesController extends Controller
     public function index()
     {
         //
-        return Serie::all();
+        $seriess = Serie::all();
+        return view('serssies');
+        //return view('series', compact('seriess'));
+
     }
 
     /**
