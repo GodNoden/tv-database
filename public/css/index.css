@@ -1,0 +1,23 @@
+html {
+    background-color: grey;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    justify-content: center;
+    text-align: center;
+}
+
+.section {
+    padding-top: 1%;
+}
+
+.super.class {
+    justify-content: center;
+    text-align: center;
+    font-size: 750%;
+}
