@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/create/serie', [SeriesController::class, 'create']);
     Route::post('/post/serie', [SeriesController::class, 'store']);
     Route::delete('/delete/serie/{id}', [SeriesController::class, 'destroy']);
-    Route::patch('edit/{id}/serie', [SeriesController::class, 'edit']);
+    Route::get('edit/{id}/serie', [SeriesController::class, 'edit']);
     Route::put('edit/serie/{id}', [SeriesController::class, 'update']);
   
 

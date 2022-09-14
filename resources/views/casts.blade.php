@@ -28,7 +28,7 @@
             @foreach ($casts as $cast)
                 <tr>
                     <th scope="row">{{ $cast->id }}</th>
-                    <td><a href={{ '/casts/' . $cast->id }}>{{ $cast->name }}</a></td>
+                    <td>{{ $cast->name }}</td>
                     <td>{{ $cast->last_name }}</td>
                     <td>{{ $cast->birthday }}</td>
                     <td>{{ $cast->nationality }}</td>

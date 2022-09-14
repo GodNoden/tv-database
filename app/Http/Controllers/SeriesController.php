@@ -70,7 +70,7 @@ class SeriesController extends Controller
     {
         $serie=Serie::findOrFail($id);
 
-        return view('/serie/edit', compact('serie'));
+        return view('serie.edit', compact('serie'));
     }
 
     /**
@@ -88,7 +88,8 @@ class SeriesController extends Controller
 
         $serie=Serie::findOrFail($id);
 
-        return view('/serie/edit', compact('serie'));
+        return redirect('/series');
+        //return view('/serie/edit', compact('serie'));
     }
 
     /**
