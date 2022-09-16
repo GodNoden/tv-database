@@ -15,8 +15,8 @@ class CreateSeriesCastsTable extends Migration
     {
         Schema::create('series_casts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('casts_id')->references('id')->on('casts');
-            $table->foreignId('series_id')->constrained('series');
+            $table->foreignId('casts_id')->constrained('casts')->onDelete('cascade');
+            $table->foreignId('series_id')->constrained('series')->onDelete('cascade');
             $table->timestamps();
         });
     }

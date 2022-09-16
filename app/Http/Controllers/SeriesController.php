@@ -17,10 +17,9 @@ class SeriesController extends Controller
     public function index()
     {
         //
-        $seriess = Serie::all();
-        return view('serssies');
-        //return view('series', compact('seriess'));
-
+        $series = Serie::all();
+        //return view('series');
+        return view('serie.series', compact('series'));
     }
 
     /**
@@ -30,7 +29,7 @@ class SeriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('serie.create');
     }
 
     /**
@@ -41,7 +40,10 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosSerie = request()->except('_token'); 
+        Serie::create($datosSerie);
+        response()->json($datosSerie);
+        return redirect('/series');
     }
 
     /**
@@ -52,7 +54,10 @@ class SeriesController extends Controller
      */
     public function show($id)
     {
-       return Serie::find($id);
+       
+        //$serie->casts()->sync([1, 2, 3, 4]);
+        return view('serie.show', ['serie' => Serie::findOrFail($id)]);
+        //ddd($view);
     }
 
     /**
@@ -63,7 +68,9 @@ class SeriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $serie=Serie::findOrFail($id);
+
+        return view('serie.edit', compact('serie'));
     }
 
     /**
@@ -76,6 +83,13 @@ class SeriesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $datosSerie = request()->except(['_token', '_method']);
+        Serie::where('id','=',$id)->update($datosSerie);
+
+        $serie=Serie::findOrFail($id);
+
+        return redirect('/series');
+        //return view('/serie/edit', compact('serie'));
     }
 
     /**
@@ -87,5 +101,7 @@ class SeriesController extends Controller
     public function destroy($id)
     {
         //
+        Serie::destroy($id);
+        return redirect('/series');
     }
 }
