@@ -40,7 +40,7 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-        $datosSerie = request()->except('_token'); 
+        $datosSerie = request()->except('_token');
         Serie::create($datosSerie);
         response()->json($datosSerie);
         return redirect('/series');
@@ -54,7 +54,7 @@ class SeriesController extends Controller
      */
     public function show($id)
     {
-       
+
         //$serie->casts()->sync([1, 2, 3, 4]);
         return view('serie.show', ['serie' => Serie::findOrFail($id)]);
         //ddd($view);
@@ -68,7 +68,7 @@ class SeriesController extends Controller
      */
     public function edit($id)
     {
-        $serie=Serie::findOrFail($id);
+        $serie = Serie::findOrFail($id);
 
         return view('serie.edit', compact('serie'));
     }
@@ -84,9 +84,9 @@ class SeriesController extends Controller
     {
         //
         $datosSerie = request()->except(['_token', '_method']);
-        Serie::where('id','=',$id)->update($datosSerie);
+        Serie::where('id', '=', $id)->update($datosSerie);
 
-        $serie=Serie::findOrFail($id);
+        $serie = Serie::findOrFail($id);
 
         return redirect('/series');
         //return view('/serie/edit', compact('serie'));

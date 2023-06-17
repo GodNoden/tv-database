@@ -10,16 +10,33 @@
 </head>
 
 <body>
-    <h1>THE ULTIMATE SUPER WEBSITE YOLOSWAG$$</h1>
-    <div class="super class">
-        <div class="section">
-            <a href="/casts">Cast</a>
+    <div class="container">
+        <h2 class="title">The TV Database</h2>
+        <div class="logout-btn">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-dropdown-link class="logout-link" :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                </x-dropdown-link>
+            </form>
         </div>
-        <div class="section">
-            <a href="/series">Series</a>
+        <div class="super class">
+            <div class="section">
+                <a href="/casts">
+                    <img src="/images/cast.jpg" alt="Casts" class="icon">
+                    <span class="text">Casts</span>
+                </a>
+            </div>
+            <div class="section">
+                <a href="/series">
+                    <img src="/images/series.jpg" alt="Series" class="icon">
+                    <span class="text">Series</span>
+                </a>
+            </div>
         </div>
     </div>
-    
 </body>
 
 </html>

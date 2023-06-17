@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+}
+
+.title {
+    background-image: linear-gradient(103deg, rgb(235, 225, 188) 7.2%, rgb(232, 188, 234) 57.5%, rgb(203, 209, 244) 90.7%);
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(103deg, rgb(235, 225, 188) 7.2%, rgb(232, 188, 234) 57.5%, rgb(203, 209, 244) 90.7%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.series-back-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.back-link {
+    text-decoration: none;
+    background-image: linear-gradient(103deg, rgb(235, 225, 188) 7.2%, rgb(232, 188, 234) 57.5%, rgb(203, 209, 244) 90.7%);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.serie-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: deeppink;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sub-title{
+    color: white;    
+}
