@@ -12,7 +12,7 @@
 
 ## '/series' Front Page 
 
-<img src="public/images/gitImages/castsfFrontPage.png" width="400">
+<img src="public/images/gitImages/seriesFrontPage.png" width="400">
 
 ## '/casts' Front Page
 
